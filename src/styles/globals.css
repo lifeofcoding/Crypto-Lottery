@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .background-clip {
+    clip-path: polygon(100% 0, 100% 41%, 50% 68%, 0 100%, 0 0);
+  }
+}
+
+@layer components {
+  .stats {
+    @apply flex-1 rounded-md border-2 border-[#DDD] bg-[rgba(24,24,24,0.8)] p-4 text-white;
+  }
+
+  .stats-container {
+    @apply rounded-lg border border-[#DDD] bg-[rgba(24,24,24,0.32)] p-5;
+  }
+
+  .countdown {
+    @apply rounded-lg bg-slate-600 p-8 text-center text-5xl md:min-w-[150px];
+  }
+
+  .countdown-label {
+    @apply pt-4 text-center text-sm uppercase;
+  }
+
+  .admin-button {
+    @apply flex-1 rounded-md bg-slate-600 p-2 hover:bg-slate-500;
+  }
+}
