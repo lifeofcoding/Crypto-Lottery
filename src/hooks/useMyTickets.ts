@@ -5,11 +5,15 @@ import { useStore } from "../components/Store";
 const useMyTickets = () => {
   const [getContract] = useStore((store) => store.getContract);
   const { contract } = getContract();
-  return useQuery(["useMyTickets"], async () => {
-    const myTickets: string[] = await contract.getMyTickets();
+  return useQuery(
+    ["useMyTickets"],
+    async () => {
+      const myTickets: string[] = await contract.getMyTickets();
 
-    return myTickets;
-  });
+      return myTickets;
+    },
+    { refetchInterval: 10 * 1000 }
+  );
 };
 
 export default useMyTickets;

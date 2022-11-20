@@ -14,7 +14,10 @@ const useGetWinningsForAddress = (account: string | undefined) => {
 
       return getWinningsForAddress.toNumber();
     },
-    { enabled: account && account.length ? true : false }
+    {
+      enabled: account && account.length ? true : false,
+      refetchInterval: 10 * 1000,
+    }
   );
 };
 

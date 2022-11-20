@@ -75,8 +75,8 @@ function Alerts() {
               exit={{ opacity: 0, bottom: -50 }}
               animate={{ opacity: 1, bottom: 0 }}
               transition={{ duration: 0.5, type: "spring", bounce: 0.8 }}
-              className={`relative rounded border-b border-l border-gray-200 ${
-                a.type === "error" ? "bg-red-500" : "bg-blue-500"
+              className={`relative rounded border-b border-l border-gray-800 font-semibold text-white ${
+                a.type === "error" ? "bg-red-500" : "bg-blue-800"
               } z-50 bg-opacity-40 p-5 backdrop-blur-lg backdrop-filter`}
             >
               {truncate(a.message, 30, true)}

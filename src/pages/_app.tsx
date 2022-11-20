@@ -13,11 +13,7 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 0 },
 };
 
-const MyApp = ({
-  Component,
-  pageProps,
-  router,
-}: AppProps<{ requiresLogin?: boolean }>) => {
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
   const queryClient = new QueryClient();
   return (
     <>

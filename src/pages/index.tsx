@@ -6,7 +6,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import Marquee from "react-fast-marquee";
 import { currency } from "../utils/constants";
 import useTicketsRemaining from "../hooks/useTicketsRemaining";
-import useCurrentWinningReward from "../hooks/useCurrentWinningReqard";
+import useCurrentWinningReward from "../hooks/useCurrentWinningReward";
 import useTicketPrice from "../hooks/useTicketPrice";
 import useTicketCommission from "../hooks/useTicketCommission";
 import useExpiration from "../hooks/useExpiration";
@@ -207,7 +207,8 @@ const Home: NextPage = () => {
                     <button
                       disabled={
                         (expiration && expiration < Date.now().toString()) ||
-                        ticketsRemaining === 0
+                        ticketsRemaining === 0 ||
+                        amount < 1
                           ? true
                           : false
                       }
