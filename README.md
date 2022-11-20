@@ -4,6 +4,8 @@
 
 ![Lottery](./public/images/crypto-lottery.png)
 
+![Lottery Admin](./public/images/crypto-lottery-admin.png)
+
 Created using:
 
 - [Next.js](https://nextjs.org/)
