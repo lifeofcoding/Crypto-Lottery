@@ -6,6 +6,8 @@
 
 ![Lottery Admin](./public/images/crypto-lottery-admin.png)
 
+![Buying Tickets](./public/images/BuyingTickets.png)
+
 Created using:
 
 - [Next.js](https://nextjs.org/)
