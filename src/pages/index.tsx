@@ -36,6 +36,7 @@ const Home: NextPage = () => {
   const { data: lastWinner } = useLastWinner();
   const { data: lastWinnerAmount } = useLastWinnerAmount();
   const { data: isLotteryOperator } = useLotteryOperator(account);
+  console.log("winnings", winnings);
   const alert = useAlerts();
   const handleClick = async () => {
     if (!ticketPrice) return;
@@ -136,7 +137,7 @@ const Home: NextPage = () => {
                       Total Winnings{" "}
                       {ethers.utils.formatEther(winnings.toString())} {currency}
                     </p>
-                    <p className="font-semibold">Click here to winthdraw</p>
+                    <p className="font-semibold">Click here to withdraw</p>
                   </button>
                 </div>
               ) : null}
@@ -213,7 +214,7 @@ const Home: NextPage = () => {
                           : false
                       }
                       onClick={handleClick}
-                      className="mt-5 w-full rounded-md bg-gradient-to-br from-blue-500 to-blue-200 px-10 py-5 font-semibold shadow-xl disabled:cursor-not-allowed disabled:from-gray-600"
+                      className="mt-5 w-full rounded-md bg-gradient-to-br from-purple-500 to-blue-200 px-10 py-5 font-semibold shadow-xl disabled:cursor-not-allowed disabled:from-gray-600"
                     >
                       Buy {amount} Tickets for{" "}
                       {ticketPrice &&
