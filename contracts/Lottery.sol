@@ -39,23 +39,23 @@ contract Lottery {
     }
 
     function getMyTickets() public view returns (address[] memory) {
-        uint nftCount = tickets.length;
-        uint myNftCount = 0;
-        for (uint i = 0; i < nftCount; i++) {
+        uint ticketCount = tickets.length;
+        uint myTicketCount = 0;
+        for (uint i = 0; i < ticketCount; i++) {
             if (tickets[i] == msg.sender) {
-                myNftCount++;
+                myTicketCount++;
             }
         }
 
-        address[] memory t = new address[](myNftCount);
-        uint nftsIndex = 0;
-        for (uint i = 0; i < nftCount; i++) {
+        address[] memory myTickets = new address[](myTicketCount);
+        uint ticketIndex = 0;
+        for (uint i = 0; i < ticketCount; i++) {
             if (tickets[i] == msg.sender) {
-                t[nftsIndex] = tickets[i];
-                nftsIndex++;
+                myTickets[ticketIndex] = tickets[i];
+                ticketIndex++;
             }
         }
-        return t;
+        return myTickets;
     }
 
     // return all the tickets
